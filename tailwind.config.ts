@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,50 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				spice: {
+					50: '#fff8ed',
+					100: '#ffefd6',
+					200: '#ffd9ac',
+					300: '#ffbd77',
+					400: '#ff9a3e',
+					500: '#ff7415',
+					600: '#f65608',
+					700: '#cc3d08',
+					800: '#a13110',
+					900: '#822c12',
+					950: '#461305',
+				},
+				curry: {
+					50: '#fcf7ee',
+					100: '#f6ead7',
+					200: '#ecd4ae',
+					300: '#e0b87d',
+					400: '#d49e54',
+					500: '#ca8538',
+					600: '#bc7232',
+					700: '#9b592b',
+					800: '#7d492a',
+					900: '#663d25',
+					950: '#381f11',
+				},
+				masala: {
+					50: '#f8f7f6',
+					100: '#efecea',
+					200: '#ded9d4',
+					300: '#c5bdb5',
+					400: '#a79c92',
+					500: '#938376',
+					600: '#82726a',
+					700: '#6c5e57',
+					800: '#5c504c',
+					900: '#4d4540',
+					950: '#292422',
+				},
+			},
+			fontFamily: {
+				'spice': ['Playfair Display', 'serif'],
+				'masala': ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +128,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'spice-gradient': 'linear-gradient(90deg, hsla(24, 100%, 83%, 1) 0%, hsla(341, 91%, 68%, 1) 100%)',
+				'curry-gradient': 'linear-gradient(90deg, hsla(39, 100%, 77%, 1) 0%, hsla(22, 90%, 57%, 1) 100%)',
 			}
 		}
 	},
