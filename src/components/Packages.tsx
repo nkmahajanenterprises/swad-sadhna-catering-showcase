@@ -26,7 +26,7 @@ const PackageCard = ({ title, price, description, features, popular = false }: P
       <h3 className="text-2xl font-bold text-masala-900 mb-2">{title}</h3>
       <div className="mb-4">
         <span className="text-3xl font-bold text-spice-700">₹{price}</span>
-        <span className="text-masala-600 ml-1">/ person</span>
+        <span className="text-masala-600 ml-1">/ plate</span>
       </div>
       <p className="text-masala-700 mb-6">{description}</p>
       
@@ -51,7 +51,7 @@ const PackageCard = ({ title, price, description, features, popular = false }: P
         )}
         asChild
       >
-        <a href="#contact">Book This Package</a>
+        <a href="https://wa.me/919876543210">Customize & Order on WhatsApp</a>
       </Button>
     </div>
   );
@@ -60,47 +60,42 @@ const PackageCard = ({ title, price, description, features, popular = false }: P
 const Packages = () => {
   const packages = [
     {
-      title: "Essential Package",
-      price: "300",
-      description: "Perfect for small gatherings and intimate events.",
+      title: "Sarvajanik Bhoj",
+      price: "399",
+      description: "Essential catering package for modest gatherings and budget-conscious events.",
       features: [
-        "3 Main Course Dishes",
-        "2 Types of Bread",
-        "1 Rice Dish",
-        "1 Dessert",
-        "Salad & Papad",
-        "Basic Serving Setup"
+        "2 Sabzi (choose from 16 seasonal options)",
+        "Rice (boiled, jeera, peas pulao, or mix veg pulao)",
+        "3 Breads (paratha/poori/roti – 8 varieties)",
+        "Salad (kachoomar or garden salad)",
+        "1 Sweet Dish OR Raita/Bhalle (choose 1)"
       ],
       popular: false
     },
     {
-      title: "Premium Package",
-      price: "450",
-      description: "Our most popular option for medium-sized events.",
+      title: "Swad Anmol",
+      price: "499",
+      description: "Our most popular package for medium-sized gatherings and special occasions.",
       features: [
-        "4 Main Course Dishes",
-        "3 Types of Bread",
-        "2 Rice Dishes",
-        "2 Desserts",
-        "Salad, Papad & Pickle",
-        "Welcome Drink",
-        "Professional Serving Setup"
+        "3 Sabzi (choose from 16 seasonal options)",
+        "Rice (boiled, jeera, peas pulao, or mix veg pulao)",
+        "3 Breads (paratha/poori/roti – 8 varieties)",
+        "Salad (kachoomar or garden salad)",
+        "Raita/Bhalle (5 raita options or dahi bhalle)"
       ],
       popular: true
     },
     {
-      title: "Luxury Package",
-      price: "600",
-      description: "The ultimate culinary experience for special occasions.",
+      title: "Shahi Dawat",
+      price: "599",
+      description: "Premium catering experience for special celebrations and memorable events.",
       features: [
-        "6 Main Course Dishes",
-        "4 Types of Bread",
-        "2 Rice Dishes",
-        "3 Desserts",
-        "Salad, Papad & Pickle",
-        "Welcome Drink & Starters",
-        "Premium Serving Setup",
-        "Dedicated Service Staff"
+        "3 Sabzi (choose from 16 seasonal options)",
+        "Rice (boiled, jeera, peas pulao, or mix veg pulao)",
+        "3 Breads (paratha/poori/roti – 8 varieties)",
+        "Salad (kachoomar or garden salad)",
+        "1 Sweet Dish (7 options)",
+        "Raita/Bhalle (5 raita options or dahi bhalle)"
       ],
       popular: false
     }
@@ -122,14 +117,41 @@ const Packages = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center p-8 bg-masala-50 rounded-xl">
-          <h3 className="text-xl font-bold text-masala-900 mb-2">Need a Custom Package?</h3>
-          <p className="text-masala-700 mb-6">
-            We understand that every event is unique. Contact us to create a personalized catering package that perfectly suits your needs.
+        <div className="mt-12 p-8 bg-masala-50 rounded-xl">
+          <div className="md:flex md:items-center md:justify-between">
+            <div className="md:max-w-2xl">
+              <h3 className="text-xl font-bold text-masala-900 mb-2">Customize Your Thali!</h3>
+              <p className="text-masala-700 mb-6 md:mb-0">
+                Choose from our extensive menu options including 16 seasonal sabzis, various rice preparations, 
+                authentic breads, sweets, salads, and raita options. Finalize your menu via WhatsApp!
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button className="bg-[#25D366] hover:bg-[#1da851]" asChild>
+                <a href="https://wa.me/919876543210" className="flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                  Order on WhatsApp
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
+                <a href="tel:+919876543210" className="flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  Call Us
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-masala-700">
+            Serving Delhi-NCR for gatherings of 50-100 guests. Our team will confirm 
+            availability and delivery details.
           </p>
-          <Button className="bg-curry-600 hover:bg-curry-700" asChild>
-            <a href="#contact">Request Custom Quote</a>
-          </Button>
         </div>
       </div>
     </section>

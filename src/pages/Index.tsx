@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Packages from "@/components/Packages";
+import MenuOptions from "@/components/MenuOptions";
 import FeaturedDishes from "@/components/FeaturedDishes";
 import ServiceAreas from "@/components/ServiceAreas";
 import ContactSection from "@/components/ContactSection";
@@ -22,6 +23,7 @@ const Index = () => {
         <Hero />
         <About />
         <Packages />
+        <MenuOptions />
         <FeaturedDishes />
         <ServiceAreas />
         <ContactSection />
