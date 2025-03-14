@@ -7,28 +7,28 @@ const testimonials = [
     name: "Gurpreet Singh",
     location: "Rajouri Garden, West Delhi",
     rating: 5,
-    text: "Swad Sadhna ne hamare Lohri celebration ko ekdum special bana diya! Sarson ka saag aur makki di roti bahut tasty thi. Sabhi mehmaano ne khoob tareef ki. 100% recommend karunga!"
+    text: "Swad Sadhna made our Lohri celebration truly special! The sarson ka saag and makki di roti were absolutely delicious. All our guests were impressed. Would 100% recommend!"
   },
   {
     id: 2,
     name: "Neha Sharma",
     location: "Dwarka, South West Delhi",
     rating: 5,
-    text: "Humne apni kitty party ke liye Swad Anmol package order kiya tha. Paneer dishes zabardast thi, especially paneer lababdar! Service bhi first class. Definitely dobara order karenge."
+    text: "We ordered the Swad Anmol package for our kitty party. The paneer dishes were outstanding, especially the paneer lababdar! The service was also first-class. Will definitely order again."
   },
   {
     id: 3,
     name: "Rajeev Malhotra",
     location: "Pitampura, North Delhi",
     rating: 4,
-    text: "Office ke farewell party ke liye catering arrange ki thi. Khaana bilkul ghar jaisa tha. Kadhi pakoda aur jeera rice combo ne dil jeet liya. Thoda late delivery hui, but overall great experience."
+    text: "Arranged catering for our office farewell party. The food tasted just like home-cooked meals. The kadhi pakoda and jeera rice combo won everyone's hearts. Delivery was slightly delayed, but overall a great experience."
   },
   {
     id: 4,
     name: "Sunita Iyer",
     location: "Vasant Kunj, South Delhi",
     rating: 5,
-    text: "Mata ki chowki ke liye Swad Sadhna ka Sarvajanik Bhoj liya tha. Sabhi guests ne kaha ki khana divine tha! Rajma chawal and gajar halwa perfect tha. Hats off to the team!"
+    text: "We chose Swad Sadhna's Sarvajanik Bhoj for our Mata ki chowki. All the guests said the food was divine! The rajma chawal and gajar halwa were perfect. Hats off to the team!"
   }
 ];
 
