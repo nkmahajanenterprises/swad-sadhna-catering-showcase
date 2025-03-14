@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { FacebookIcon, InstagramIcon, TwitterIcon, PhoneCall, Mail, MapPin } from "lucide-react";
+import { FacebookIcon, InstagramIcon, PhoneCall, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -19,11 +19,13 @@ const Footer = () => {
               <a href="#" className="text-white hover:text-spice-400 transition-colors">
                 <FacebookIcon size={20} />
               </a>
-              <a href="#" className="text-white hover:text-spice-400 transition-colors">
+              <a 
+                href="https://www.instagram.com/swad.sadhna/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-spice-400 transition-colors"
+              >
                 <InstagramIcon size={20} />
-              </a>
-              <a href="#" className="text-white hover:text-spice-400 transition-colors">
-                <TwitterIcon size={20} />
               </a>
             </div>
           </div>
@@ -41,6 +43,9 @@ const Footer = () => {
                 <a href="#packages" className="text-masala-300 hover:text-spice-400 transition-colors">Packages</a>
               </li>
               <li>
+                <a href="#testimonials" className="text-masala-300 hover:text-spice-400 transition-colors">Testimonials</a>
+              </li>
+              <li>
                 <a href="#dishes" className="text-masala-300 hover:text-spice-400 transition-colors">Our Dishes</a>
               </li>
               <li>
@@ -54,16 +59,16 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <PhoneCall size={18} className="text-spice-400 mt-1 shrink-0" />
-                <span className="text-masala-300">+91 98765 43210</span>
+                <span className="text-masala-300">+91 9818327309</span>
               </li>
               <li className="flex gap-3">
                 <Mail size={18} className="text-spice-400 mt-1 shrink-0" />
-                <span className="text-masala-300">info@swadsadhna.com</span>
+                <span className="text-masala-300">swadsadhna@gmail.com</span>
               </li>
               <li className="flex gap-3">
                 <MapPin size={18} className="text-spice-400 mt-1 shrink-0" />
                 <span className="text-masala-300">
-                  Rajouri Garden, West Delhi, Delhi NCR, India
+                  Dwarka, New Delhi, Delhi NCR, India
                 </span>
               </li>
             </ul>

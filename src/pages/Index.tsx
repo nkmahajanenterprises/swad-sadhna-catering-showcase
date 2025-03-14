@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Packages from "@/components/Packages";
 import MenuOptions from "@/components/MenuOptions";
 import FeaturedDishes from "@/components/FeaturedDishes";
+import Testimonials from "@/components/Testimonials";
 import ServiceAreas from "@/components/ServiceAreas";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ const Index = () => {
         <Packages />
         <MenuOptions />
         <FeaturedDishes />
+        <Testimonials />
         <ServiceAreas />
         <ContactSection />
       </main>
