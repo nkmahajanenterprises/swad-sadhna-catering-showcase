@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { Bowl, Wheat, Cookie, Milk, Dessert } from "lucide-react";
+import { SoupIcon, Wheat, Cookie, Milk, Dessert } from "lucide-react";
 
 interface Dish {
   name: string;
@@ -270,7 +269,7 @@ const FeaturedDishes = () => {
   };
 
   const categoryIcons: Record<string, React.ReactNode> = {
-    "sabzi": <Bowl className="mr-2 h-5 w-5" />,
+    "sabzi": <SoupIcon className="mr-2 h-5 w-5" />,
     "rice": <Wheat className="mr-2 h-5 w-5" />,
     "bread": <Cookie className="mr-2 h-5 w-5" />,
     "raita": <Milk className="mr-2 h-5 w-5" />,
