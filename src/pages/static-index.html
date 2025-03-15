@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swad Sadhna - Authentic North Indian Catering</title>
+  <!-- Include Tailwind CSS via CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            spice: {
+              50: '#FFF5F0',
+              100: '#FFEADC',
+              200: '#FFD6B9',
+              500: '#FF8C4C',
+              600: '#FF6B1A',
+              700: '#E04F00',
+              800: '#AE3D00',
+            },
+            curry: {
+              50: '#FFFAEB',
+              100: '#FEF3C7',
+              600: '#D97706',
+              700: '#B45309',
+            },
+            masala: {
+              50: '#F8F9FA',
+              100: '#F1F3F5',
+              200: '#E9ECEF',
+              500: '#ADB5BD',
+              600: '#6C757D',
+              700: '#495057',
+              800: '#343A40',
+              900: '#212529',
+            },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: bold;
+      color: #AE3D00;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 66.666667%;
+      height: 0.25rem;
+      background-color: #FF8C4C;
+      border-radius: 9999px;
+    }
+    .content-card {
+      background-color: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid #F1F3F5;
+    }
+    .content-card:hover {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    .hero-section {
+      background-image: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1505932794964-de6e3777ff44?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .navbar-link {
+      color: #343A40;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .navbar-link:hover {
+      color: #FF6B1A;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-white">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-2 transition-all duration-300">
+    <div class="container max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-2xl font-bold text-spice-800">
+          Swad <span class="text-curry-600">Sadhna</span>
+        </span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#home" class="navbar-link">Home</a>
+        <a href="#about" class="navbar-link">About</a>
+        <a href="#packages" class="navbar-link">Packages</a>
+        <a href="#dishes" class="navbar-link">Dishes</a>
+        <a href="#contact" class="navbar-link">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden md:inline-block bg-spice-600 hover:bg-spice-700 text-white px-4 py-2 rounded-full transition-colors">
+        Book Catering
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-masala-900 focus:outline-none" id="menu-toggle">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden fixed inset-x-0 bg-white shadow-lg transition-all duration-300 ease-in-out opacity-0 -top-full" id="mobile-menu">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#home" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Home</a>
+        <a href="#about" class="text-masala-900 hover:text-spice-600 py-2 font-medium">About</a>
+        <a href="#packages" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Packages</a>
+        <a href="#dishes" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Dishes</a>
+        <a href="#contact" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Contact</a>
+        <a href="#contact" class="w-full bg-spice-600 hover:bg-spice-700 text-white py-2 text-center rounded-full">
+          Book Catering
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section relative min-h-screen pt-20 flex items-center overflow-hidden">
+      <div class="container max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-left">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-spice-800 leading-tight">
+            Authentic North Indian
+            <span class="block text-curry-600">Catering Experience</span>
+          </h1>
+          <p class="text-lg md:text-xl text-masala-800 mb-8 max-w-lg">
+            Delight your guests with exquisite vegetarian cuisine crafted with love and tradition for all your special occasions.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#packages" class="bg-spice-600 hover:bg-spice-700 text-white py-3 px-6 rounded-full text-center font-medium transition-colors">
+              Explore Packages
+            </a>
+            <a href="#contact" class="border border-curry-600 text-curry-700 hover:bg-curry-50 py-3 px-6 rounded-full text-center font-medium transition-colors">
+              Contact Us
+            </a>
+          </div>
+          <div class="mt-10 flex items-center gap-6">
+            <div class="flex -space-x-2">
+              <div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-masala-200 flex items-center justify-center">
+                <span class="text-xs font-medium text-masala-500">★</span>
+              </div>
+              <div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-masala-200 flex items-center justify-center">
+                <span class="text-xs font-medium text-masala-500">★</span>
+              </div>
+              <div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-masala-200 flex items-center justify-center">
+                <span class="text-xs font-medium text-masala-500">★</span>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center gap-1">
+                <span class="text-amber-500">★★★★★</span>
+                <span class="font-medium">5.0</span>
+              </div>
+              <p class="text-sm text-masala-600">100+ Satisfied Customers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other sections would follow here... -->
+    
+    <!-- About Section -->
+    <!-- Packages Section -->
+    <!-- Menu Options Section -->
+    <!-- Featured Dishes Section -->
+    <!-- Testimonials Section -->
+    
+    <!-- Service Areas Section -->
+    <section class="py-16 bg-masala-50">
+      <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-lg mx-auto text-center mb-12">
+          <h2 class="section-title text-center">Service Areas</h2>
+          <p class="text-masala-700 mt-4">
+            We provide catering services across Delhi NCR, with special focus on West Delhi
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- West Delhi -->
+          <div class="content-card p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-map-pin text-spice-600"></i>
+              <h3 class="text-lg font-semibold text-masala-900">West Delhi</h3>
+            </div>
+            <ul class="space-y-1">
+              <li class="text-masala-700 text-sm">• Rajouri Garden</li>
+              <li class="text-masala-700 text-sm">• Janakpuri</li>
+              <li class="text-masala-700 text-sm">• Vikaspuri</li>
+              <li class="text-masala-700 text-sm">• Dwarka</li>
+              <li class="text-masala-700 text-sm">• Paschim Vihar</li>
+              <li class="text-masala-700 text-sm">• Punjabi Bagh</li>
+            </ul>
+          </div>
+          
+          <!-- North Delhi -->
+          <div class="content-card p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-map-pin text-spice-600"></i>
+              <h3 class="text-lg font-semibold text-masala-900">North Delhi</h3>
+            </div>
+            <ul class="space-y-1">
+              <li class="text-masala-700 text-sm">• Model Town</li>
+              <li class="text-masala-700 text-sm">• Civil Lines</li>
+              <li class="text-masala-700 text-sm">• Rohini</li>
+              <li class="text-masala-700 text-sm">• Pitampura</li>
+              <li class="text-masala-700 text-sm">• Ashok Vihar</li>
+            </ul>
+          </div>
+          
+          <!-- South Delhi -->
+          <div class="content-card p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-map-pin text-spice-600"></i>
+              <h3 class="text-lg font-semibold text-masala-900">South Delhi</h3>
+            </div>
+            <ul class="space-y-1">
+              <li class="text-masala-700 text-sm">• Vasant Kunj</li>
+              <li class="text-masala-700 text-sm">• Saket</li>
+              <li class="text-masala-700 text-sm">• Greater Kailash</li>
+              <li class="text-masala-700 text-sm">• South Extension</li>
+              <li class="text-masala-700 text-sm">• Lajpat Nagar</li>
+              <li class="text-masala-700 text-sm">• Defence Colony</li>
+            </ul>
+          </div>
+          
+          <!-- East Delhi -->
+          <div class="content-card p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fas fa-map-pin text-spice-600"></i>
+              <h3 class="text-lg font-semibold text-masala-900">East Delhi</h3>
+            </div>
+            <ul class="space-y-1">
+              <li class="text-masala-700 text-sm">• Mayur Vihar</li>
+              <li class="text-masala-700 text-sm">• Laxmi Nagar</li>
+              <li class="text-masala-700 text-sm">• Preet Vihar</li>
+              <li class="text-masala-700 text-sm">• Vivek Vihar</li>
+            </ul>
+          </div>
+          
+          <!-- Continue with other areas... -->
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-masala-700 italic">
+            * Additional travel charges may apply for locations outside Delhi NCR
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+      <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div class="max-w-lg mx-auto text-center mb-12">
+          <h2 class="section-title text-center">Contact Us</h2>
+          <p class="text-masala-700 mt-4">
+            Ready to plan your perfect catering experience? Reach out to us!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="content-card p-8">
+            <h3 class="text-xl font-semibold text-masala-900 mb-6">Get In Touch</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <i class="fas fa-phone text-spice-600 mt-1"></i>
+                <div>
+                  <h4 class="font-medium text-masala-900">Phone</h4>
+                  <p class="text-masala-700">+91 9818327309</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fas fa-envelope text-spice-600 mt-1"></i>
+                <div>
+                  <h4 class="font-medium text-masala-900">Email</h4>
+                  <p class="text-masala-700">swadsadhna@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fas fa-map-marker-alt text-spice-600 mt-1"></i>
+                <div>
+                  <h4 class="font-medium text-masala-900">Address</h4>
+                  <p class="text-masala-700">Dwarka, New Delhi</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <i class="fas fa-clock text-spice-600 mt-1"></i>
+                <div>
+                  <h4 class="font-medium text-masala-900">Business Hours</h4>
+                  <p class="text-masala-700">Mon - Sun: 8:00 AM - 8:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="font-medium text-masala-900 mb-4">Follow Us</h4>
+              <div class="flex gap-4">
+                <a href="#" class="text-masala-700 hover:text-spice-600 transition-colors">
+                  <i class="fab fa-facebook text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/swad.sadhna/" class="text-masala-700 hover:text-spice-600 transition-colors">
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card p-8 flex flex-col justify-center">
+            <h3 class="text-xl font-semibold text-masala-900 mb-4">Ready to organize your event?</h3>
+            <p class="text-masala-700 mb-6">
+              Contact us to discuss your catering needs and get a customized quote.
+            </p>
+            
+            <div class="space-y-4">
+              <a href="https://wa.me/919818327309" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-full text-center font-medium transition-colors flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp text-xl"></i>
+                <span>Customize on WhatsApp</span>
+              </a>
+              <a href="tel:+919818327309" class="w-full border border-spice-600 text-spice-700 hover:bg-spice-50 py-3 px-6 rounded-full text-center font-medium transition-colors flex items-center justify-center gap-2">
+                <i class="fas fa-phone"></i>
+                <span>Call Now</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-masala-800 text-white py-12">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Swad <span class="text-curry-600">Sadhna</span></h3>
+          <p class="text-masala-400 mb-6">
+            Authentic North Indian vegetarian catering for all your special occasions.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-masala-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/swad.sadhna/" class="text-masala-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-masala-400 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#about" class="text-masala-400 hover:text-white transition-colors">About</a></li>
+            <li><a href="#packages" class="text-masala-400 hover:text-white transition-colors">Packages</a></li>
+            <li><a href="#dishes" class="text-masala-400 hover:text-white transition-colors">Dishes</a></li>
+            <li><a href="#contact" class="text-masala-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-spice-600 mt-1"></i>
+              <span class="text-masala-400">Dwarka, New Delhi</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-phone text-spice-600 mt-1"></i>
+              <span class="text-masala-400">+91 9818327309</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-envelope text-spice-600 mt-1"></i>
+              <span class="text-masala-400">swadsadhna@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-masala-700 mt-8 pt-8 text-center text-masala-500">
+        <p>© 2023 Swad Sadhna. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple JavaScript for mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      menuToggle.addEventListener('click', function() {
+        if (mobileMenu.classList.contains('opacity-0')) {
+          mobileMenu.classList.remove('opacity-0', '-top-full');
+          mobileMenu.classList.add('opacity-100', 'top-[60px]');
+          menuToggle.innerHTML = '<i class="fas fa-times text-xl"></i>';
+        } else {
+          mobileMenu.classList.remove('opacity-100', 'top-[60px]');
+          mobileMenu.classList.add('opacity-0', '-top-full');
+          menuToggle.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+        }
+      });
+      
+      // Close mobile menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('opacity-100', 'top-[60px]');
+          mobileMenu.classList.add('opacity-0', '-top-full');
+          menuToggle.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+        });
+      });
+      
+      // Add shadow to navbar on scroll
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 10) {
+          header.classList.add('shadow-md');
+          header.classList.remove('py-4');
+          header.classList.add('py-2');
+        } else {
+          header.classList.remove('shadow-md');
+          header.classList.add('py-4');
+          header.classList.remove('py-2');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

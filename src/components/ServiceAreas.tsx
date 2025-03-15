@@ -13,7 +13,7 @@ const ServiceAreas = () => {
     },
     {
       region: "South Delhi",
-      localities: ["Vasant Kunj", "Saket", "Greater Kailash", "Lajpat Nagar", "Defence Colony"]
+      localities: ["Vasant Kunj", "Saket", "Greater Kailash", "South Extension", "Lajpat Nagar", "Defence Colony"]
     },
     {
       region: "East Delhi",

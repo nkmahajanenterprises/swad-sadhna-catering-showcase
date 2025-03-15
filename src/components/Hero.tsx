@@ -53,16 +53,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="relative hidden md:flex justify-center">
-          <div className="absolute inset-0 bg-curry-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-          <div className="w-full max-w-md aspect-square rounded-full border-8 border-white shadow-2xl overflow-hidden animate-float">
-            <img 
-              src="https://images.unsplash.com/photo-1585937421612-70a008356c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Delicious North Indian Thali" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
+        {/* Removed the circular image that was here */}
       </div>
     </section>
   );
