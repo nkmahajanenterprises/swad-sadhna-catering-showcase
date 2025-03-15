@@ -29,9 +29,9 @@ Just upload the `index.html` and `styles.css` files to your web server's root di
 
 The website uses custom CSS variables for colors which can be easily modified in the `styles.css` file:
 
-- `--color-spice-*`: Red/orange color palette
-- `--color-curry-*`: Yellow/gold color palette
-- `--color-masala-*`: Gray/neutral color palette
+- `--color-primary`: Red/orange color palette
+- `--color-secondary`: Yellow/gold color palette
+- `--color-neutral-*`: Gray/neutral color palette
 
 ## Contact
 
