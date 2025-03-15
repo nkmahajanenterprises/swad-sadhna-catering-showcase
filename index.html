@@ -1,18 +1,903 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>swad-sadhna-catering-showcase</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swad Sadhna - Authentic North Indian Catering</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body class="font-body text-masala-900 bg-white">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+    <div class="container max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-2xl font-bold font-spice text-spice-800">
+          Swad <span class="text-curry-600">Sadhna</span>
+        </span>
+      </a>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#home" class="text-masala-900 hover:text-spice-600 font-medium transition-colors">Home</a>
+        <a href="#about" class="text-masala-900 hover:text-spice-600 font-medium transition-colors">About</a>
+        <a href="#packages" class="text-masala-900 hover:text-spice-600 font-medium transition-colors">Packages</a>
+        <a href="#dishes" class="text-masala-900 hover:text-spice-600 font-medium transition-colors">Dishes</a>
+        <a href="#contact" class="text-masala-900 hover:text-spice-600 font-medium transition-colors">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden md:flex bg-spice-600 hover:bg-spice-700 text-white px-4 py-2 rounded-md transition-colors">
+        Book Catering
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-masala-900 focus:outline-none" id="menu-toggle">
+        <i data-feather="menu" id="menu-icon"></i>
+        <i data-feather="x" id="close-icon" class="hidden"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-x-0 bg-white shadow-lg transition-all duration-300 ease-in-out top-[-100%] opacity-0">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#home" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Home</a>
+        <a href="#about" class="text-masala-900 hover:text-spice-600 py-2 font-medium">About</a>
+        <a href="#packages" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Packages</a>
+        <a href="#dishes" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Dishes</a>
+        <a href="#contact" class="text-masala-900 hover:text-spice-600 py-2 font-medium">Contact</a>
+        <a href="#contact" class="w-full bg-spice-600 hover:bg-spice-700 text-white px-4 py-2 rounded-md text-center">Book Catering</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen pt-20 flex items-center overflow-hidden hero-section">
+    <div class="container max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-left">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-spice-800 leading-tight">
+          Authentic North Indian
+          <span class="block text-curry-600">Catering Experience</span>
+        </h1>
+        <p class="text-lg md:text-xl text-masala-800 mb-8 max-w-lg">
+          Delight your guests with exquisite vegetarian cuisine crafted with love and tradition for all your special occasions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#packages" class="bg-spice-600 hover:bg-spice-700 text-white px-6 py-3 rounded-full inline-block text-center">
+            Explore Packages
+          </a>
+          <a href="#contact" class="border-curry-600 text-curry-700 hover:bg-curry-50 border px-6 py-3 rounded-full inline-block text-center">
+            Contact Us
+          </a>
+        </div>
+        <div class="mt-10 flex items-center gap-6">
+          <div class="flex -space-x-2">
+            <div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-masala-200 flex items-center justify-center">
+              <span class="text-xs font-medium text-masala-500">★</span>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-masala-200 flex items-center justify-center">
+              <span class="text-xs font-medium text-masala-500">★</span>
+            </div>
+            <div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-masala-200 flex items-center justify-center">
+              <span class="text-xs font-medium text-masala-500">★</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-1">
+              <span class="text-amber-500">★★★★★</span>
+              <span class="font-medium">5.0</span>
+            </div>
+            <p class="text-sm text-masala-600">100+ Satisfied Customers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-masala-50">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="max-w-lg mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-masala-900">About Swad Sadhna</h2>
+        <p class="text-masala-700 mt-4">
+          Bringing authentic North Indian flavors to your special occasions with our passion for culinary excellence
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-lg text-masala-800">
+            At <span class="font-semibold text-curry-700">Swad Sadhna</span>, we believe that food is more than just sustenance—it's an experience that brings people together and creates lasting memories.
+          </p>
+          <p class="text-lg text-masala-800">
+            We specialize in authentic North Indian vegetarian cuisine, crafted with love, tradition, and the finest ingredients. Our team of experienced chefs takes pride in preparing delicious, homestyle meals that delight the senses and warm the heart.
+          </p>
+          <p class="text-lg text-masala-800">
+            From intimate gatherings to grand celebrations, we cater to all types of events with personalized service and attention to detail. Our goal is to make your special occasion truly memorable with our exceptional culinary creations.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-masala-100">
+              <i data-feather="coffee" class="text-spice-600 mb-2"></i>
+              <h3 class="font-semibold text-masala-900">Authentic Flavors</h3>
+              <p class="text-sm text-masala-600 mt-1">Traditional recipes with modern presentations</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-masala-100">
+              <i data-feather="users" class="text-spice-600 mb-2"></i>
+              <h3 class="font-semibold text-masala-900">Gatherings</h3>
+              <p class="text-sm text-masala-600 mt-1">Perfect for groups of 50-100 people</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-masala-100">
+              <i data-feather="award" class="text-spice-600 mb-2"></i>
+              <h3 class="font-semibold text-masala-900">Quality Assured</h3>
+              <p class="text-sm text-masala-600 mt-1">Premium ingredients for exceptional taste</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-masala-100">
+              <i data-feather="map-pin" class="text-spice-600 mb-2"></i>
+              <h3 class="font-semibold text-masala-900">West Delhi</h3>
+              <p class="text-sm text-masala-600 mt-1">Serving all across Delhi NCR</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="absolute -top-6 -left-6 w-full h-full bg-curry-200 rounded-2xl"></div>
+          <div class="absolute -bottom-6 -right-6 w-full h-full bg-spice-200 rounded-2xl"></div>
+          <div class="relative bg-white p-6 rounded-2xl shadow-lg border border-masala-100 overflow-hidden">
+            <div class="w-full h-80 bg-gray-200 rounded-xl mb-6"></div>
+            <h3 class="text-2xl font-semibold text-masala-900 mb-2">Perfect For Every Occasion</h3>
+            <ul class="space-y-2 text-masala-700">
+              <li class="flex items-center gap-2">
+                <span class="text-spice-600">✓</span> Kitty Parties
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-spice-600">✓</span> Satsangs & Spiritual Events
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-spice-600">✓</span> Family Get-togethers
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-spice-600">✓</span> Corporate Meetings
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-spice-600">✓</span> House Warming Functions
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="py-16 bg-masala-50">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="max-w-lg mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-masala-900">Service Areas</h2>
+        <p class="text-masala-700 mt-4">
+          We provide catering services across Delhi NCR, with special focus on West Delhi
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">West Delhi</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• Rajouri Garden</li>
+            <li class="text-masala-700 text-sm">• Janakpuri</li>
+            <li class="text-masala-700 text-sm">• Vikaspuri</li>
+            <li class="text-masala-700 text-sm">• Dwarka</li>
+            <li class="text-masala-700 text-sm">• Paschim Vihar</li>
+            <li class="text-masala-700 text-sm">• Punjabi Bagh</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">North Delhi</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• Model Town</li>
+            <li class="text-masala-700 text-sm">• Civil Lines</li>
+            <li class="text-masala-700 text-sm">• Rohini</li>
+            <li class="text-masala-700 text-sm">• Pitampura</li>
+            <li class="text-masala-700 text-sm">• Ashok Vihar</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">South Delhi</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• Vasant Kunj</li>
+            <li class="text-masala-700 text-sm">• Saket</li>
+            <li class="text-masala-700 text-sm">• Greater Kailash</li>
+            <li class="text-masala-700 text-sm">• South Extension</li>
+            <li class="text-masala-700 text-sm">• Lajpat Nagar</li>
+            <li class="text-masala-700 text-sm">• Defence Colony</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">East Delhi</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• Mayur Vihar</li>
+            <li class="text-masala-700 text-sm">• Laxmi Nagar</li>
+            <li class="text-masala-700 text-sm">• Preet Vihar</li>
+            <li class="text-masala-700 text-sm">• Vivek Vihar</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">Central Delhi</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• Connaught Place</li>
+            <li class="text-masala-700 text-sm">• Karol Bagh</li>
+            <li class="text-masala-700 text-sm">• Patel Nagar</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">Gurgaon</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• DLF Phase 1-5</li>
+            <li class="text-masala-700 text-sm">• Sushant Lok</li>
+            <li class="text-masala-700 text-sm">• Sector 14</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">Noida</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• Sector 18</li>
+            <li class="text-masala-700 text-sm">• Sector 62</li>
+            <li class="text-masala-700 text-sm">• Greater Noida</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-feather="map-pin" class="text-spice-600"></i>
+            <h3 class="text-lg font-semibold text-masala-900">Ghaziabad</h3>
+          </div>
+          <ul class="space-y-1">
+            <li class="text-masala-700 text-sm">• Indirapuram</li>
+            <li class="text-masala-700 text-sm">• Vaishali</li>
+            <li class="text-masala-700 text-sm">• Crossings Republik</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-masala-700 italic">
+          * Additional travel charges may apply for locations outside Delhi NCR
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Options Section -->
+  <section id="menu-options" class="py-16 bg-masala-50">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="max-w-lg mx-auto text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-masala-900">Customize Your Thali</h2>
+        <p class="text-masala-700 mt-4">
+          Explore our extensive menu options to create your perfect dining experience
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-sm">
+        <div class="w-full" id="accordion">
+          <!-- Sabzi -->
+          <div class="border-b">
+            <button class="accordion-button flex justify-between items-center w-full py-4 font-medium text-left transition-all">
+              <span class="text-lg font-semibold text-masala-900">
+                Sabziyan <span class="text-sm font-normal ml-2 text-masala-600">(Choose from 16 seasonal options)</span>
+              </span>
+              <i data-feather="chevron-down" class="h-4 w-4 transition-transform accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden pb-4 pt-0">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-2">
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Rajma Masala</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Pindi Chole</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Dal Makhni</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Kadhi Pakoda</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Mix Dal</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Dal Tadka</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Dal Palak</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Saag</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Palak Chana</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Matar Paneer</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Paneer Butter Masala</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Paneer Lababdar</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Kadhai Paneer</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Paneer Bhurji</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Paneer Do Pyaza</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Mix Veg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rice -->
+          <div class="border-b">
+            <button class="accordion-button flex justify-between items-center w-full py-4 font-medium text-left transition-all">
+              <span class="text-lg font-semibold text-masala-900">
+                Chawal <span class="text-sm font-normal ml-2 text-masala-600">(Fragrant rice preparations)</span>
+              </span>
+              <i data-feather="chevron-down" class="h-4 w-4 transition-transform accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden pb-4 pt-0">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-2">
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Boiled Rice</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Jeera Rice</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Peas Pulao</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Mix Veg Pulao</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Breads -->
+          <div class="border-b">
+            <button class="accordion-button flex justify-between items-center w-full py-4 font-medium text-left transition-all">
+              <span class="text-lg font-semibold text-masala-900">
+                Rotiyan <span class="text-sm font-normal ml-2 text-masala-600">(Freshly prepared authentic breads)</span>
+              </span>
+              <i data-feather="chevron-down" class="h-4 w-4 transition-transform accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden pb-4 pt-0">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-2">
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Tawa Paratha</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Lachha Paratha</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Mix Paratha</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Plain Poori</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Palak Poori</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Tamatari Poori</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Beetroot Poori</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Bedmi Poori</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sweets -->
+          <div class="border-b">
+            <button class="accordion-button flex justify-between items-center w-full py-4 font-medium text-left transition-all">
+              <span class="text-lg font-semibold text-masala-900">
+                Meetha <span class="text-sm font-normal ml-2 text-masala-600">(Delicious dessert options)</span>
+              </span>
+              <i data-feather="chevron-down" class="h-4 w-4 transition-transform accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden pb-4 pt-0">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-2">
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Rice Kheer</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Sevaiyyan Kheer</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Fruit Cream</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Kesari Halwa</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Moong Dal Halwa</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Sooji Halwa</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Gajar Halwa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Salads -->
+          <div class="border-b">
+            <button class="accordion-button flex justify-between items-center w-full py-4 font-medium text-left transition-all">
+              <span class="text-lg font-semibold text-masala-900">
+                Salads <span class="text-sm font-normal ml-2 text-masala-600">(Fresh and crunchy salad options)</span>
+              </span>
+              <i data-feather="chevron-down" class="h-4 w-4 transition-transform accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden pb-4 pt-0">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-2">
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Kachoomar Salad</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Garden Salad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Raita/Dahi -->
+          <div class="border-b">
+            <button class="accordion-button flex justify-between items-center w-full py-4 font-medium text-left transition-all">
+              <span class="text-lg font-semibold text-masala-900">
+                Raita/Dahi <span class="text-sm font-normal ml-2 text-masala-600">(Yogurt preparations)</span>
+              </span>
+              <i data-feather="chevron-down" class="h-4 w-4 transition-transform accordion-icon"></i>
+            </button>
+            <div class="accordion-content hidden pb-4 pt-0">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-2">
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Pineapple Raita</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Mix Veg Raita</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Pudina Raita</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Boondi Raita</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-md hover:bg-masala-50">
+                  <span class="text-spice-600">•</span>
+                  <span class="text-masala-800">Dahi Bhalle</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <p class="text-masala-700 italic mb-4">
+            * Menu items are subject to seasonal availability. Our team will confirm your final selections.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+            <a 
+              href="https://wa.me/919818327309" 
+              class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1da851] text-white px-6 py-3 rounded-md font-medium transition-colors"
+            >
+              <i data-feather="message-circle" class="h-5 w-5"></i>
+              Customize on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-masala-50">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="max-w-lg mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-masala-900">What Our Customers Say</h2>
+        <p class="text-masala-700 mt-4">
+          Don't just take our word for it - hear what our satisfied customers have to say about our catering services
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+          <div class="flex mb-4">
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+          </div>
+          <p class="text-masala-700 italic mb-6">"Swad Sadhna made our Lohri celebration truly special! The sarson ka saag and makki di roti were absolutely delicious. All our guests were impressed. Would 100% recommend!"</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-spice-100 text-spice-700 flex items-center justify-center font-bold text-lg">
+              G
+            </div>
+            <div class="ml-4">
+              <h4 class="font-semibold text-masala-900">Gurpreet Singh</h4>
+              <p class="text-masala-600 text-sm">Rajouri Garden, West Delhi</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+          <div class="flex mb-4">
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+          </div>
+          <p class="text-masala-700 italic mb-6">"We ordered the Swad Anmol package for our kitty party. The paneer dishes were outstanding, especially the paneer lababdar! The service was also first-class. Will definitely order again."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-spice-100 text-spice-700 flex items-center justify-center font-bold text-lg">
+              N
+            </div>
+            <div class="ml-4">
+              <h4 class="font-semibold text-masala-900">Neha Sharma</h4>
+              <p class="text-masala-600 text-sm">Dwarka, South West Delhi</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+          <div class="flex mb-4">
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+          </div>
+          <p class="text-masala-700 italic mb-6">"Arranged catering for our office farewell party. The food tasted just like home-cooked meals. The kadhi pakoda and jeera rice combo won everyone's hearts. Delivery was slightly delayed, but overall a great experience."</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-spice-100 text-spice-700 flex items-center justify-center font-bold text-lg">
+              R
+            </div>
+            <div class="ml-4">
+              <h4 class="font-semibold text-masala-900">Rajeev Malhotra</h4>
+              <p class="text-masala-600 text-sm">Pitampura, North Delhi</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+          <div class="flex mb-4">
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+            <i data-feather="star" class="fill-spice-500 text-spice-500"></i>
+          </div>
+          <p class="text-masala-700 italic mb-6">"We chose Swad Sadhna's Sarvajanik Bhoj for our Mata ki chowki. All the guests said the food was divine! The rajma chawal and gajar halwa were perfect. Hats off to the team!"</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full bg-spice-100 text-spice-700 flex items-center justify-center font-bold text-lg">
+              S
+            </div>
+            <div class="ml-4">
+              <h4 class="font-semibold text-masala-900">Sunita Iyer</h4>
+              <p class="text-masala-600 text-sm">Vasant Kunj, South Delhi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="max-w-lg mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-masala-900">Contact Us</h2>
+        <p class="text-masala-700 mt-4">
+          Get in touch to discuss your catering needs or to book our services for your upcoming event
+        </p>
+      </div>
+
+      <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm max-w-3xl mx-auto">
+        <div class="space-y-6">
+          <div class="flex items-start gap-3">
+            <i data-feather="phone" class="text-spice-600 mt-1"></i>
+            <div>
+              <h4 class="font-medium text-masala-900">Phone</h4>
+              <p class="text-masala-700">+91 9818327309</p>
+              <a 
+                href="https://wa.me/919818327309" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-spice-600 hover:text-spice-700 mt-2 font-medium"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <i data-feather="mail" class="text-spice-600 mt-1"></i>
+            <div>
+              <h4 class="font-medium text-masala-900">Email</h4>
+              <p class="text-masala-700">swadsadhna@gmail.com</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <i data-feather="clock" class="text-spice-600 mt-1"></i>
+            <div>
+              <h4 class="font-medium text-masala-900">Business Hours</h4>
+              <p class="text-masala-700">Mon-Sat: 9:00 AM - 8:00 PM</p>
+              <p class="text-masala-700">Sunday: 10:00 AM - 4:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-masala-900 text-white pt-16 pb-6">
+    <div class="container max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-6 font-spice">
+            Swad <span class="text-spice-400">Sadhna</span>
+          </h3>
+          <p class="text-masala-300 mb-6">
+            Authentic North Indian vegetarian catering service for all your special occasions and gatherings.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="text-white hover:text-spice-400 transition-colors">
+              <i data-feather="facebook"></i>
+            </a>
+            <a 
+              href="https://www.instagram.com/swad.sadhna/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="text-white hover:text-spice-400 transition-colors"
+            >
+              <i data-feather="instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#home" class="text-masala-300 hover:text-spice-400 transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="text-masala-300 hover:text-spice-400 transition-colors">About Us</a>
+            </li>
+            <li>
+              <a href="#packages" class="text-masala-300 hover:text-spice-400 transition-colors">Packages</a>
+            </li>
+            <li>
+              <a href="#testimonials" class="text-masala-300 hover:text-spice-400 transition-colors">Testimonials</a>
+            </li>
+            <li>
+              <a href="#dishes" class="text-masala-300 hover:text-spice-400 transition-colors">Our Dishes</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-masala-300 hover:text-spice-400 transition-colors">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <i data-feather="phone-call" class="text-spice-400 mt-1 shrink-0"></i>
+              <span class="text-masala-300">+91 9818327309</span>
+            </li>
+            <li class="flex gap-3">
+              <i data-feather="mail" class="text-spice-400 mt-1 shrink-0"></i>
+              <span class="text-masala-300">swadsadhna@gmail.com</span>
+            </li>
+            <li class="flex gap-3">
+              <i data-feather="map-pin" class="text-spice-400 mt-1 shrink-0"></i>
+              <span class="text-masala-300">
+                Dwarka, New Delhi, Delhi NCR, India
+              </span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+          <p class="text-masala-300 mb-4">
+            Subscribe to receive updates on special offers and new menu items.
+          </p>
+          <div class="flex gap-2">
+            <input 
+              type="email" 
+              placeholder="Your Email" 
+              class="bg-masala-800 border-masala-700 text-white px-3 py-2 rounded-md w-full" 
+            />
+            <button class="bg-spice-600 hover:bg-spice-700 px-4 py-2 rounded-md">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-masala-800 pt-6 mt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-masala-400 text-sm">
+            &copy; <span id="current-year"></span> Swad Sadhna Catering. All Rights Reserved.
+          </p>
+          <div class="flex gap-4 mt-4 md:mt-0">
+            <a href="#" class="text-masala-400 hover:text-spice-400 transition-colors text-sm">
+              Privacy Policy
+            </a>
+            <a href="#" class="text-masala-400 hover:text-spice-400 transition-colors text-sm">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Feather Icons
+    document.addEventListener('DOMContentLoaded', () => {
+      feather.replace();
+      
+      // Set current year in footer
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('top-[-100%]');
+        mobileMenu.classList.toggle('top-[60px]');
+        mobileMenu.classList.toggle('opacity-0');
+        mobileMenu.classList.toggle('opacity-100');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+      
+      // Close mobile menu when clicking nav items
+      const mobileNavItems = mobileMenu.querySelectorAll('a');
+      mobileNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+          mobileMenu.classList.add('top-[-100%]');
+          mobileMenu.classList.remove('top-[60px]');
+          mobileMenu.classList.add('opacity-0');
+          mobileMenu.classList.remove('opacity-100');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+      
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbar.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-2');
+          navbar.classList.remove('bg-transparent', 'py-4');
+        } else {
+          navbar.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-md', 'py-2');
+          navbar.classList.add('bg-transparent', 'py-4');
+        }
+      });
+      
+      // Accordion functionality
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector('.accordion-icon');
+          
+          // Toggle this content
+          content.classList.toggle('hidden');
+          
+          // Rotate icon
+          if (content.classList.contains('hidden')) {
+            icon.style.transform = 'rotate(0deg)';
+          } else {
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+    });
+  </script>
+</body>
 </html>

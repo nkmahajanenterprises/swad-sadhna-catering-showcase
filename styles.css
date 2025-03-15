@@ -1,0 +1,166 @@
+
+/* Custom CSS */
+:root {
+  --color-spice-50: #fef3f2;
+  --color-spice-100: #fee5e1;
+  --color-spice-200: #fccdc7;
+  --color-spice-300: #faa9a1;
+  --color-spice-400: #f67a6d;
+  --color-spice-500: #ee4d3d;
+  --color-spice-600: #d93423;
+  --color-spice-700: #b72717;
+  --color-spice-800: #962417;
+  --color-spice-900: #7b2418;
+  
+  --color-curry-50: #fffbeb;
+  --color-curry-100: #fef4c7;
+  --color-curry-200: #fee989;
+  --color-curry-300: #fdd54b;
+  --color-curry-400: #fcc222;
+  --color-curry-500: #f5a70b;
+  --color-curry-600: #db7f07;
+  --color-curry-700: #b55a0a;
+  --color-curry-800: #94450e;
+  --color-curry-900: #7a390f;
+  
+  --color-masala-50: #f9f8f7;
+  --color-masala-100: #f0eeeb;
+  --color-masala-200: #ded9d3;
+  --color-masala-300: #c2bab1;
+  --color-masala-400: #a1968a;
+  --color-masala-500: #887c6e;
+  --color-masala-600: #6e655b;
+  --color-masala-700: #59534b;
+  --color-masala-800: #4b4640;
+  --color-masala-900: #413d38;
+}
+
+/* Fonts */
+.font-spice {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Colors */
+.bg-spice-50 { background-color: var(--color-spice-50); }
+.bg-spice-100 { background-color: var(--color-spice-100); }
+.bg-spice-200 { background-color: var(--color-spice-200); }
+.bg-spice-300 { background-color: var(--color-spice-300); }
+.bg-spice-400 { background-color: var(--color-spice-400); }
+.bg-spice-500 { background-color: var(--color-spice-500); }
+.bg-spice-600 { background-color: var(--color-spice-600); }
+.bg-spice-700 { background-color: var(--color-spice-700); }
+.bg-spice-800 { background-color: var(--color-spice-800); }
+.bg-spice-900 { background-color: var(--color-spice-900); }
+
+.bg-curry-50 { background-color: var(--color-curry-50); }
+.bg-curry-100 { background-color: var(--color-curry-100); }
+.bg-curry-200 { background-color: var(--color-curry-200); }
+.bg-curry-300 { background-color: var(--color-curry-300); }
+.bg-curry-400 { background-color: var(--color-curry-400); }
+.bg-curry-500 { background-color: var(--color-curry-500); }
+.bg-curry-600 { background-color: var(--color-curry-600); }
+.bg-curry-700 { background-color: var(--color-curry-700); }
+.bg-curry-800 { background-color: var(--color-curry-800); }
+.bg-curry-900 { background-color: var(--color-curry-900); }
+
+.bg-masala-50 { background-color: var(--color-masala-50); }
+.bg-masala-100 { background-color: var(--color-masala-100); }
+.bg-masala-200 { background-color: var(--color-masala-200); }
+.bg-masala-300 { background-color: var(--color-masala-300); }
+.bg-masala-400 { background-color: var(--color-masala-400); }
+.bg-masala-500 { background-color: var(--color-masala-500); }
+.bg-masala-600 { background-color: var(--color-masala-600); }
+.bg-masala-700 { background-color: var(--color-masala-700); }
+.bg-masala-800 { background-color: var(--color-masala-800); }
+.bg-masala-900 { background-color: var(--color-masala-900); }
+
+.text-spice-50 { color: var(--color-spice-50); }
+.text-spice-100 { color: var(--color-spice-100); }
+.text-spice-200 { color: var(--color-spice-200); }
+.text-spice-300 { color: var(--color-spice-300); }
+.text-spice-400 { color: var(--color-spice-400); }
+.text-spice-500 { color: var(--color-spice-500); }
+.text-spice-600 { color: var(--color-spice-600); }
+.text-spice-700 { color: var(--color-spice-700); }
+.text-spice-800 { color: var(--color-spice-800); }
+.text-spice-900 { color: var(--color-spice-900); }
+
+.text-curry-50 { color: var(--color-curry-50); }
+.text-curry-100 { color: var(--color-curry-100); }
+.text-curry-200 { color: var(--color-curry-200); }
+.text-curry-300 { color: var(--color-curry-300); }
+.text-curry-400 { color: var(--color-curry-400); }
+.text-curry-500 { color: var(--color-curry-500); }
+.text-curry-600 { color: var(--color-curry-600); }
+.text-curry-700 { color: var(--color-curry-700); }
+.text-curry-800 { color: var(--color-curry-800); }
+.text-curry-900 { color: var(--color-curry-900); }
+
+.text-masala-50 { color: var(--color-masala-50); }
+.text-masala-100 { color: var(--color-masala-100); }
+.text-masala-200 { color: var(--color-masala-200); }
+.text-masala-300 { color: var(--color-masala-300); }
+.text-masala-400 { color: var(--color-masala-400); }
+.text-masala-500 { color: var(--color-masala-500); }
+.text-masala-600 { color: var(--color-masala-600); }
+.text-masala-700 { color: var(--color-masala-700); }
+.text-masala-800 { color: var(--color-masala-800); }
+.text-masala-900 { color: var(--color-masala-900); }
+
+.border-spice-600 { border-color: var(--color-spice-600); }
+.border-curry-600 { border-color: var(--color-curry-600); }
+.border-masala-100 { border-color: var(--color-masala-100); }
+.border-masala-700 { border-color: var(--color-masala-700); }
+.border-masala-800 { border-color: var(--color-masala-800); }
+
+.hover\:bg-spice-700:hover { background-color: var(--color-spice-700); }
+.hover\:bg-curry-50:hover { background-color: var(--color-curry-50); }
+.hover\:bg-masala-50:hover { background-color: var(--color-masala-50); }
+
+.hover\:text-spice-600:hover { color: var(--color-spice-600); }
+.hover\:text-spice-700:hover { color: var(--color-spice-700); }
+.hover\:text-spice-400:hover { color: var(--color-spice-400); }
+
+.fill-spice-500 {
+  fill: var(--color-spice-500);
+}
+
+/* Sections */
+.section-container {
+  @apply container max-w-7xl mx-auto px-4;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-4 text-masala-900;
+}
+
+.content-card {
+  @apply bg-white rounded-lg shadow-sm;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1505932794964-de6e3777ff44?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Utility Classes */
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-duration: 300ms;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-duration: 300ms;
+}
+
+/* Star icons */
+[data-feather="star"].fill-spice-500 {
+  fill: var(--color-spice-500);
+}
